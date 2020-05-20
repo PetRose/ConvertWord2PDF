@@ -21,7 +21,7 @@ Add-Type -AssemblyName System
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
-$InitialDirectory = $Env:OneDriveCommercial     # Could be candidate for InitialFolder (RootFolder parameter)
+$InitialDirectory = $Env:OneDriveCommercial     # Could be candidate for InitialFolder (RootFolder parameter, if using OneDrive for Business/School)
 
 
 $FileBrowser = New-Object System.Windows.Forms.FolderBrowserDialog   
@@ -31,6 +31,10 @@ $null = $FileBrowser.ShowDialog()               # Kick in to select dialogue
 
 $desiredFolder = $FileBrowser.Selectedpath      # Pikc up the chosen one
 
+If ($FileBrowser.Selectedpath -eq '') {
+    Write-Host "You cancelled the operation. Script stops here." -ForegroundColor Red -BackgroundColor White  
+    Break                         # Stop immediately
+} 
  
 New-Variable pdfno -Value 0 -Description "Holds the number of PDF files in the input folder, if any is found in there. Once converted, we pick up number once more."
 $path = $desiredFolder                          # InitialDirectory  
