@@ -9,11 +9,11 @@ the Adobe Reader or any PDF Reader.
 ### Prerequisites
 
 A PowerShell exucution platform, usually available in Windows 8 or later versions like Windows 10.
-You also need Word Application, I have developed this for Word 10 and tested it with Word2016. 
-I has observed an error if you try to feed it .doc word files, so please convert the filetype to .docx, 
-but you can still leave it in the backward Word2010 compatibility mode. 
+You also need Word Application, I have developed this for Word 10 and also tested it with Word2016. 
+Be aware that some Word10 'features' makes the .doc documents readonly which could interfear with the ability  
+to convert it, but lets hope for the best. 
 
-If you are unaware of what you have, please make these checks:
+If you are unaware of what you have for PowerShell, please make these checks:
  - Open PowerShel ISE (from Start menu)
  - In the Commandline near bottom, type this and press Enter: 
         $PSVersionTable
@@ -81,9 +81,10 @@ Once this is done, you have to "Unblock" the file to tell PowerShell its OK to e
 You can also just Copy the code inside the Script, and then paste it into a text file you save with a name with filetype '.PS1' and place it in the designated Script folder you decide. I suggest you name it *Convert2PDF.PS1*
 
 ## Activating the Convert 2 PDF Script
-You can do this from either the PowerShell ISE, pointing to or opening the Script and chose the 'Run'.
+You can do this from either the PowerShell ISE, pointing to or opening the Script and chose the 'Run' or even change directory inside the PS Commandline 
+to your script folder, and then execute it from there.
 
-Or you can create a shortcut to the Script and just let the Operating system to start PowerShell and letr it execute the Script.
+Or for the end user, you can create a shortcut to the Script and just let the Operating system to start PowerShell and let it execute the Script.
 
 The first thing happening, when script starts, it lets you decide which folder(s) to work with this Conversion.
 
