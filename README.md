@@ -103,6 +103,7 @@ In other words, #you need to have folders without PDF files* in order to process
 Also, notice the ***sub-folders of the folder you chose, with Word files will be converted !***
 
 A succesful conversion would show up like this (small batch):
+
       Checking prerequisites for PDF conversion..
       Starting PDF Conversion of folder:
          C:\Users\SonjaPC\Documents\TestWordConv\Word
