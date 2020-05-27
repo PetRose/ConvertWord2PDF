@@ -5,6 +5,8 @@
 The purpose of this handy tool, is to facilitate the conversion process for large scale projects/organisations which:
 - Produce large amount of Word documents, and has to mass-convert these for audiences in the form af PDF files readable through
 the Adobe Reader or any PDF Reader.
+A useful feature added, is the ability to run the script without any User Intervention ie. as a Scheduled Task on a server (with PowerShell)
+or a client Windows machine. You just need to look at the Examples. Type this in the PS CMD line: Get-Help .\Convert-Word2PDF.ps1 -Examples
 
 ### Prerequisites
 
@@ -78,9 +80,9 @@ Once this is done, you have to "Unblock" the file to tell PowerShell its OK to e
 
     You right-click on the file to get its properties, and you can check the 'Unblock' checkbox near the bottom on first tab.
 
-You can also just Copy the code inside the Script, and then paste it into a text file you save with a name with filetype '.PS1' and place it in the designated Script folder you decide. I suggest you name it *Convert2PDF.PS1*
+You can also just Copy the code inside the Script, and then paste it into a text file you save with a name with filetype '.PS1' and place it in the designated Script folder you decide. I suggest you name it *Convert-Word2PDF.PS1*
 
-## Activating the Convert 2 PDF Script
+## Activating the Convert Word 2 PDF Script
 You can do this from either the PowerShell ISE, pointing to or opening the Script and chose the 'Run' or even change directory inside the PS Commandline 
 to your script folder, and then execute it from there.
 
@@ -112,6 +114,8 @@ A succesful conversion would show up like this (small batch):
       Number of Word documents converted to PDF :  2
 
 So *happy Conversion* with your word and documentation generation efforts
+
+Use the builtin documentation within the script, to get more details: Get-Help .\Convert-Word2PDF.ps1 -Full
 
 Cheers
 Peter Rosenberg
